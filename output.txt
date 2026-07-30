@@ -1,0 +1,67 @@
+========== LLM TEXT PREPROCESSING OUTPUT ==========
+
+1. Dataset Loaded
+   id                                          text  \
+0   1                         I love this phone 😍❤️   
+1   2                Worst customer service ever 😡👎   
+2   3                   Today is a beautiful day 😊🌞   
+3   4                     I am feeling sad today 😢💔   
+4   5  Wow! Amazing offer 🎉 Visit https://offer.com   
+
+                  cleaned_text                sentence_tokens  
+0            i love this phone            [i love this phone]  
+1  worst customer service ever  [worst customer service ever]  
+2     today is a beautiful day     [today is a beautiful day]  
+3       i am feeling sad today       [i am feeling sad today]  
+4      wow amazing offer visit      [wow amazing offer visit]  
+
+2. Dataset Information
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 10 entries, 0 to 9
+Data columns (total 4 columns):
+ #   Column           Non-Null Count  Dtype 
+---  ------           --------------  ----- 
+ 0   id               10 non-null     int64 
+ 1   text             10 non-null     object
+ 2   cleaned_text     10 non-null     object
+ 3   sentence_tokens  10 non-null     object
+dtypes: int64(1), object(3)
+memory usage: 452.0+ bytes
+
+3. Dataset Shape
+(10, 4)
+
+4. Missing Values
+id                 0
+text               0
+cleaned_text       0
+sentence_tokens    0
+dtype: int64
+
+5. Cleaned Dataset
+                                           text                 cleaned_text
+0                         I love this phone 😍❤️            i love this phone
+1                Worst customer service ever 😡👎  worst customer service ever
+2                   Today is a beautiful day 😊🌞     today is a beautiful day
+3                     I am feeling sad today 😢💔       i am feeling sad today
+4  Wow! Amazing offer 🎉 Visit https://offer.com      wow amazing offer visit
+5                   Thanks @HP for your help 🙏😊         thanks for your help
+6                   I scored 95 marks 🥳📚 #Happy      i scored 95 marks happy
+7                    This food is very tasty 😋🍕      this food is very tasty
+8                   I am waiting for the bus 🚌🙂     i am waiting for the bus
+9                        Good night everyone 🌙✨          good night everyone
+
+6. Sentence Tokenization
+                  cleaned_text                sentence_tokens
+0            i love this phone            [i love this phone]
+1  worst customer service ever  [worst customer service ever]
+2     today is a beautiful day     [today is a beautiful day]
+3       i am feeling sad today       [i am feeling sad today]
+4      wow amazing offer visit      [wow amazing offer visit]
+5         thanks for your help         [thanks for your help]
+6      i scored 95 marks happy      [i scored 95 marks happy]
+7      this food is very tasty      [this food is very tasty]
+8     i am waiting for the bus     [i am waiting for the bus]
+9          good night everyone          [good night everyone]
+
+7. Task Completed Successfully
